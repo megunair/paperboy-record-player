@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPERBOY Record Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="record-player">
+            <!-- Speaker Section -->
+            <div class="speaker-panel">
+                <div class="speaker-grid"></div>
+                <div class="display-screen"></div>
+                <div class="controls-section">
+                    <div class="level-controls">
+                        <span>LEVELS</span>
+                        <div class="slider-container">
+                            <div class="level-slider" id="bass-slider">
+                                <div class="slider-fill"></div>
+                                <div class="slider-knob"></div>
+                            </div>
+                            <div class="level-slider" id="mid-slider">
+                                <div class="slider-fill"></div>
+                                <div class="slider-knob"></div>
+                            </div>
+                            <div class="level-slider" id="treble-slider">
+                                <div class="slider-fill"></div>
+                                <div class="slider-knob"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dock-control">
+                        <span>DOCK CONTROL</span>
+                        <div class="dock-buttons">
+                            <div class="dock-button" id="dock-1"></div>
+                            <div class="dock-button" id="dock-2"></div>
+                            <div class="dock-button light-on" id="dock-3"></div>
+                            <div class="dock-button light-on" id="dock-4"></div>
+                            <div class="dock-button" id="dock-5"></div>
+                            <div class="dock-button" id="dock-6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Turntable Section -->
+            <div class="turntable">
+                <div class="turntable-base">
+                    <!-- Embossed star patterns -->
+                    <div class="star-pattern star-1"></div>
+                    <div class="star-pattern star-2"></div>
+                    <div class="star-pattern star-3"></div>
+                </div>
+                
+                <!-- Record -->
+                <div class="record" id="record">
+                    <div class="record-label">
+                        <div class="paperboy-logo">PAPERBOY</div>
+                        <div class="character-icon">
+                            <!-- SVG character will be inserted here by CSS -->
+                        </div>
+                    </div>
+                    <div class="record-grooves"></div>
+                </div>
+                
+                <!-- Tonearm -->
+                <div class="tonearm" id="tonearm">
+                    <div class="tonearm-base"></div>
+                    <div class="tonearm-arm">
+                        <div class="tonearm-head"></div>
+                    </div>
+                </div>
+                
+                <!-- Controls -->
+                <div class="player-controls">
+                    <div class="volume-knob" id="volume-knob">
+                        <div class="knob-indicator"></div>
+                    </div>
+                    <div class="media-buttons">
+                        <button class="media-button" id="prev-button">
+                            <i class="fas fa-backward"></i>
+                        </button>
+                        <button class="media-button" id="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="media-button" id="next-button">
+                            <i class="fas fa-forward"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Audio Player (hidden) -->
+        <audio id="audio-player" src="https://cdn.freesound.org/previews/630/630443_1648170-lq.mp3"></audio>
+        
+        <!-- Track Info -->
+        <div class="track-info">
+            <h2>Now Playing: Demo Track</h2>
+            <p>PAPERBOY • Interactive Record Player</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
