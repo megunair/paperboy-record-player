@@ -501,6 +501,33 @@ body {
     opacity: 0.8;
 }
 
+/* GitHub Link */
+.github-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.github-link a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: var(--dark-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.github-link a:hover {
+    background-color: #1a3a6c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.github-link i {
+    margin-right: 5px;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .record-player {
