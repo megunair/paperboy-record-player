@@ -1,0 +1,537 @@
+/* Main Styles for PAPERBOY Record Player */
+:root {
+    --turntable-blue: #5b9bd5;
+    --dark-blue: #2e5ca3;
+    --background-yellow: #f8d568;
+    --record-blue: #2e5ca3;
+    --record-white: #f5f5f5;
+    --control-silver: #c0c0c0;
+    --knob-blue: #2e5ca3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+}
+
+/* Record Player Layout */
+.record-player {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Speaker Panel */
+.speaker-panel {
+    background-color: var(--turntable-blue);
+    width: 30%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.speaker-grid {
+    height: 40%;
+    background-color: var(--turntable-blue);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.speaker-grid::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 60%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.speaker-grid::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: calc(60% + 2px);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 5px;
+    z-index: 1;
+}
+
+.speaker-grid::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: calc(60% + 2px);
+}
+
+.display-screen {
+    height: 20%;
+    background-color: #222;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 3px solid #f0c040;
+}
+
+.controls-section {
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.level-controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.level-controls span {
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.slider-container {
+    display: flex;
+    gap: 15px;
+    height: 80px;
+}
+
+.level-slider {
+    width: 20px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, #4a75a2, #2196f3);
+    border-radius: 10px;
+    transition: height 0.3s;
+}
+
+#bass-slider .slider-fill {
+    height: 60%;
+}
+
+#mid-slider .slider-fill {
+    height: 40%;
+}
+
+#treble-slider .slider-fill {
+    height: 80%;
+}
+
+.slider-knob {
+    position: absolute;
+    width: 25px;
+    height: 15px;
+    background-color: var(--control-silver);
+    border-radius: 5px;
+    left: -2.5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    transition: bottom 0.3s;
+}
+
+#bass-slider .slider-knob {
+    bottom: calc(60% - 7.5px);
+}
+
+#mid-slider .slider-knob {
+    bottom: calc(40% - 7.5px);
+}
+
+#treble-slider .slider-knob {
+    bottom: calc(80% - 7.5px);
+}
+
+.dock-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.dock-control span {
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.dock-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.dock-button {
+    width: 100%;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: relative;
+}
+
+.dock-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.dock-button.light-on::after {
+    background-color: #f8d568;
+    box-shadow: 0 0 5px #f8d568;
+}
+
+/* Turntable */
+.turntable {
+    background-color: var(--turntable-blue);
+    width: 70%;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.turntable-base {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.star-pattern {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star-1 {
+    top: 50px;
+    left: 50px;
+    transform: rotate(15deg);
+}
+
+.star-2 {
+    top: 150px;
+    right: 70px;
+    transform: rotate(-10deg);
+}
+
+.star-3 {
+    bottom: 60px;
+    left: 150px;
+    transform: rotate(5deg);
+}
+
+/* Record */
+.record {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: var(--record-white);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 1s ease;
+}
+
+.record.playing {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.record-label {
+    width: 150px;
+    height: 150px;
+    background-color: var(--record-blue);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.paperboy-logo {
+    color: var(--record-white);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.character-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--record-blue);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='white' d='M50,20 L65,5 L80,20 L65,35 L80,50 L65,65 L50,50 L35,65 L20,50 L35,35 L20,20 L35,5 Z M40,40 L60,40 Q65,40 65,45 L65,55 Q65,60 60,60 L40,60 Q35,60 35,55 L35,45 Q35,40 40,40 Z'/%3E%3C/svg%3E");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    background-color: var(--record-white);
+}
+
+.record-grooves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.record-grooves::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: repeating-radial-gradient(
+        circle,
+        transparent,
+        transparent 5px,
+        rgba(0, 0, 0, 0.05) 5px,
+        rgba(0, 0, 0, 0.05) 6px
+    );
+}
+
+.record-grooves::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+/* Tonearm */
+.tonearm {
+    position: absolute;
+    top: 150px;
+    right: 80px;
+    width: 20px;
+    height: 180px;
+    transform-origin: top center;
+    transform: rotate(-30deg);
+    transition: transform 0.5s ease;
+}
+
+.tonearm.playing {
+    transform: rotate(0deg);
+}
+
+.tonearm-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: var(--control-silver);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tonearm-arm {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 5px;
+    height: 160px;
+    background-color: #111;
+    transform-origin: top center;
+}
+
+.tonearm-head {
+    position: absolute;
+    bottom: 0;
+    left: -7.5px;
+    width: 20px;
+    height: 15px;
+    background-color: var(--control-silver);
+    transform: rotate(15deg);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Player Controls */
+.player-controls {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.volume-knob {
+    width: 50px;
+    height: 50px;
+    background-color: var(--knob-blue);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.knob-indicator {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: white;
+    transform-origin: bottom center;
+    transform: translateX(-50%);
+}
+
+.media-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.media-button {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.media-button:hover {
+    transform: scale(1.05);
+}
+
+.media-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.media-button i {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Track Info */
+.track-info {
+    margin-top: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.track-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.track-info p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .record-player {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .speaker-panel {
+        width: 100%;
+        height: 200px;
+        border-radius: 20px 20px 0 0;
+    }
+    
+    .turntable {
+        width: 100%;
+        height: 400px;
+        border-radius: 0 0 20px 20px;
+    }
+    
+    .record {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .record-label {
+        width: 125px;
+        height: 125px;
+    }
+    
+    .character-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
