@@ -1,0 +1,30 @@
+{
+  "name": "paperboy-record-player",
+  "version": "1.0.0",
+  "description": "An interactive web implementation of the PAPERBOY Record Player design",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megunair/paperboy-record-player.git"
+  },
+  "author": "Meghna Nair",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/megunair/paperboy-record-player/issues"
+  },
+  "homepage": "https://github.com/megunair/paperboy-record-player#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.0",
+    "@testing-library/dom": "^9.3.4",
+    "@testing-library/jest-dom": "^6.4.0",
+    "@testing-library/user-event": "^14.5.2",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
