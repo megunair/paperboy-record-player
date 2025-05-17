@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f8d568" />
+  
+  <!-- Record Player Container -->
+  <g transform="translate(100, 75)">
+    <!-- Speaker Panel -->
+    <rect x="0" y="0" width="150" height="300" rx="20" ry="20" fill="#5b9bd5" />
+    
+    <!-- Speaker Grid -->
+    <rect x="15" y="15" width="120" height="100" rx="10" ry="10" fill="#4a75a2" opacity="0.6" />
+    
+    <!-- Speaker Dots -->
+    <g fill="#222222">
+      <circle cx="30" cy="30" r="2" />
+      <circle cx="50" cy="30" r="2" />
+      <circle cx="70" cy="30" r="2" />
+      <circle cx="90" cy="30" r="2" />
+      <circle cx="110" cy="30" r="2" />
+      <circle cx="30" cy="50" r="2" />
+      <circle cx="50" cy="50" r="2" />
+      <circle cx="70" cy="50" r="2" />
+      <circle cx="90" cy="50" r="2" />
+      <circle cx="110" cy="50" r="2" />
+      <circle cx="30" cy="70" r="2" />
+      <circle cx="50" cy="70" r="2" />
+      <circle cx="70" cy="70" r="2" />
+      <circle cx="90" cy="70" r="2" />
+      <circle cx="110" cy="70" r="2" />
+      <circle cx="30" cy="90" r="2" />
+      <circle cx="50" cy="90" r="2" />
+      <circle cx="70" cy="90" r="2" />
+      <circle cx="90" cy="90" r="2" />
+      <circle cx="110" cy="90" r="2" />
+    </g>
+    
+    <!-- Display Screen -->
+    <rect x="15" y="130" width="120" height="50" rx="10" ry="10" fill="#222222" stroke="#f0c040" stroke-width="3" />
+    
+    <!-- Level Controls -->
+    <text x="15" y="200" font-family="Arial" font-size="12" fill="white">LEVELS</text>
+    
+    <!-- Sliders -->
+    <g transform="translate(15, 210)">
+      <rect x="0" y="0" width="20" height="80" rx="10" ry="10" fill="rgba(0,0,0,0.2)" />
+      <rect x="0" y="32" width="20" height="48" rx="10" ry="10" fill="#4a75a2" />
+      <rect x="-2.5" y="32" width="25" height="15" rx="5" ry="5" fill="#c0c0c0" />
+      
+      <rect x="40" y="0" width="20" height="80" rx="10" ry="10" fill="rgba(0,0,0,0.2)" />
+      <rect x="40" y="48" width="20" height="32" rx="10" ry="10" fill="#4a75a2" />
+      <rect x="37.5" y="48" width="25" height="15" rx="5" ry="5" fill="#c0c0c0" />
+      
+      <rect x="80" y="0" width="20" height="80" rx="10" ry="10" fill="rgba(0,0,0,0.2)" />
+      <rect x="80" y="16" width="20" height="64" rx="10" ry="10" fill="#4a75a2" />
+      <rect x="77.5" y="16" width="25" height="15" rx="5" ry="5" fill="#c0c0c0" />
+    </g>
+    
+    <!-- Turntable Base -->
+    <rect x="150" y="0" width="450" height="300" rx="20" ry="20" fill="#5b9bd5" />
+    
+    <!-- Star Patterns -->
+    <path d="M200,50 L210,70 L230,70 L215,85 L220,105 L200,95 L180,105 L185,85 L170,70 L190,70 Z" fill="rgba(255,255,255,0.1)" />
+    <path d="M520,140 L530,160 L550,160 L535,175 L540,195 L520,185 L500,195 L505,175 L490,160 L510,160 Z" fill="rgba(255,255,255,0.1)" />
+    <path d="M300,240 L310,260 L330,260 L315,275 L320,295 L300,285 L280,295 L285,275 L270,260 L290,260 Z" fill="rgba(255,255,255,0.1)" />
+    
+    <!-- Record -->
+    <circle cx="375" cy="150" r="100" fill="#f5f5f5" />
+    <circle cx="375" cy="150" r="50" fill="#2e5ca3" />
+    <text x="345" y="155" font-family="Arial" font-size="16" font-weight="bold" fill="white">PAPERBOY</text>
+    
+    <!-- Record Grooves -->
+    <circle cx="375" cy="150" r="95" fill="none" stroke="#ddd" stroke-width="1" />
+    <circle cx="375" cy="150" r="90" fill="none" stroke="#ddd" stroke-width="1" />
+    <circle cx="375" cy="150" r="85" fill="none" stroke="#ddd" stroke-width="1" />
+    <circle cx="375" cy="150" r="80" fill="none" stroke="#ddd" stroke-width="1" />
+    <circle cx="375" cy="150" r="75" fill="none" stroke="#ddd" stroke-width="1" />
+    <circle cx="375" cy="150" r="70" fill="none" stroke="#ddd" stroke-width="1" />
+    <circle cx="375" cy="150" r="65" fill="none" stroke="#ddd" stroke-width="1" />
+    <circle cx="375" cy="150" r="60" fill="none" stroke="#ddd" stroke-width="1" />
+    <circle cx="375" cy="150" r="55" fill="none" stroke="#ddd" stroke-width="1" />
+    
+    <!-- Tonearm -->
+    <g transform="translate(520, 100)">
+      <circle cx="0" cy="0" r="15" fill="#c0c0c0" />
+      <rect x="-2.5" y="0" width="5" height="100" fill="#111" transform="rotate(-30)" />
+      <rect x="-10" y="85" width="20" height="15" fill="#c0c0c0" transform="rotate(-15)" />
+    </g>
+    
+    <!-- Volume Knob -->
+    <circle cx="550" cy="230" r="20" fill="#2e5ca3" />
+    <rect x="549" y="210" width="2" height="15" fill="white" />
+    
+    <!-- Media Buttons -->
+    <g transform="translate(530, 270)">
+      <rect x="0" y="0" width="40" height="20" rx="5" ry="5" fill="white" />
+      <text x="16" y="15" font-family="Arial" font-size="14" fill="#333">▶</text>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="400" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">PAPERBOY Record Player</text>
+  <text x="400" y="430" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Interactive Web Implementation</text>
+</svg>
