@@ -31,6 +31,26 @@ An interactive web implementation of the PAPERBOY Record Player design, inspired
 - Font Awesome icons
 - SVG for the record character icon and favicon
 
+## Testing
+
+This project includes comprehensive unit tests focused on ease of use and user experience. The tests ensure that all interactive components work correctly and provide appropriate feedback to users.
+
+### Running the Tests
+
+1. Install dependencies with `npm install`
+2. Run tests with `npm test`
+3. For test coverage report, run `npm run test:coverage`
+
+### Test Categories
+
+- Core Playback: Tests for play, pause, next, and previous functionality
+- Visual Feedback: Ensures animations and visual state changes work correctly
+- Track Management: Tests track changing and cycling behavior
+- User Controls: Tests volume knob, equalizer sliders, and other controls
+- Accessibility: Ensures keyboard navigation and focus management
+- Responsive Design: Tests UI adaptation for different screen sizes
+- Error States: Tests graceful handling of errors and edge cases
+
 ## Design Credits
 
 This implementation is based on the PAPERBOY Record Player Animation design, featuring a stylish blue and yellow color scheme with a branded vinyl record.
@@ -55,3 +75,4 @@ Created based on Figma design analysis - PAPERBOY Record Player Animation
 
 ![GitHub](https://img.shields.io/github/license/megunair/paperboy-record-player)
 ![GitHub last commit](https://img.shields.io/github/last-commit/megunair/paperboy-record-player)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
